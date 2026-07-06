@@ -1,0 +1,166 @@
+.scroll-stack-scroller {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: visible;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: scroll-position;
+}
+
+.scroll-stack-scroller.window-scroll {
+  height: auto;
+  overflow: visible;
+}
+
+.scroll-stack-inner {
+  padding: 10vh 5rem 30rem;
+  min-height: 100vh;
+}
+
+.scroll-stack-card-wrapper {
+  position: relative;
+}
+
+.scroll-stack-card {
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  height: 20rem;
+  width: 100%;
+  margin: 30px 0;
+  padding: 3rem;
+  border-radius: 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  /* Glassmorphism Design */
+  background: rgba(10, 15, 10, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  /* Alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  /* Improve mobile performance */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* ─── Card Theme Variations ────────────────────────────────── */
+.card-tech {
+  border-color: rgba(74, 222, 128, 0.15);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5), 
+    0 0 40px rgba(74, 222, 128, 0.04), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.card-curation {
+  border-color: rgba(34, 211, 238, 0.15);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5), 
+    0 0 40px rgba(34, 211, 238, 0.04), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.card-community {
+  border-color: rgba(168, 85, 247, 0.15);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5), 
+    0 0 40px rgba(168, 85, 247, 0.04), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ─── Heading ──────────────────────────────────────────────── */
+.scroll-stack-card h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+}
+
+.card-tech h2 {
+  background: linear-gradient(120deg, #4ade80 0%, #a3e635 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-curation h2 {
+  background: linear-gradient(120deg, #22d3ee 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-community h2 {
+  background: linear-gradient(120deg, #a855f7 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Paragraph ────────────────────────────────────────────── */
+.scroll-stack-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  line-height: 1.6;
+  color: rgba(200, 210, 230, 0.8);
+  max-width: 520px;
+  margin: 0;
+}
+
+/* ─── Badges ───────────────────────────────────────────────── */
+.stack-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  margin-bottom: 1.25rem;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+}
+
+.stack-badge.tech {
+  background: rgba(74, 222, 128, 0.08);
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.2);
+}
+
+.stack-badge.curation {
+  background: rgba(34, 211, 238, 0.08);
+  color: #22d3ee;
+  border-color: rgba(34, 211, 238, 0.2);
+}
+
+.stack-badge.community {
+  background: rgba(168, 85, 247, 0.08);
+  color: #c084fc;
+  border-color: rgba(168, 85, 247, 0.2);
+}
+
+/* ─── Scroll Stack End ─────────────────────────────────────── */
+.scroll-stack-end {
+  width: 100%;
+  height: 1px;
+}

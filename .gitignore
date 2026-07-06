@@ -1,0 +1,12 @@
+# Node.js
+**/node_modules/
+**/dist/
+**/.env
+
+# Rust
+**/target/
+
+# System Files
+.DS_Store
+Thumbs.db
+*.log
