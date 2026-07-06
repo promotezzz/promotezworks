@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+// promotezworks official landing page app
 import Aurora from './Aurora';
 import CardNav from './CardNav';
 import TextType from './TextType';
