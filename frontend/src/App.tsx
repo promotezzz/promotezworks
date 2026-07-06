@@ -14,8 +14,10 @@ import './App.css';
 export default function App() {
   const [downloads, setDownloads] = useState(0);
 
+  const base = import.meta.env.BASE_URL;
+
   const menuItems = [
-    { link: 'https://modrinth.com/modpack/yours-optimized', text: 'Yours Optimized', image: '/yours_optimized_logo.png' },
+    { link: 'https://modrinth.com/modpack/yours-optimized', text: 'Yours Optimized', image: `${base}yours_optimized_logo.png` },
     { link: 'https://modrinth.com/organization/promotezworks', text: 'Coming Soon', image: 'https://images.unsplash.com/photo-1559893088-c0787ebfc084?w=600&q=80' },
     { link: 'https://modrinth.com/organization/promotezworks', text: 'Coming Soon', image: 'https://images.unsplash.com/photo-1511497584788-876760111969?w=600&q=80' }
   ];
@@ -91,7 +93,7 @@ export default function App() {
       title: 'PROMOTEZ',
       subtitle: 'FOUNDER & OWNER',
       overlayColor: 'rgba(10, 20, 30, 0.35)',
-      imageUrl: '/promotez.png',
+      imageUrl: `${base}promotez.png`,
     },
     {
       badge: 'POSITION OPEN',
@@ -259,8 +261,8 @@ export default function App() {
             Not an official Minecraft product. We are not approved by, associated with, or affiliated with Mojang Studios, Microsoft, or any of their respective entities. All Minecraft brand assets, names, and trademarks belong to their respective owners.
           </p>
           <div className="footer-links">
-            <a href="/tos.html" className="footer-link">Terms of Service</a>
-            <a href="/privacy.html" className="footer-link">Privacy Policy</a>
+            <a href={`${base}tos.html`} className="footer-link">Terms of Service</a>
+            <a href={`${base}privacy.html`} className="footer-link">Privacy Policy</a>
             <a href="https://modrinth.com/organization/promotezworks" target="_blank" rel="noopener noreferrer" className="footer-link">Modrinth Page</a>
           </div>
         </div>
